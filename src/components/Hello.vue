@@ -1,19 +1,15 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}!!!</h1>
+    <xfield label="test"></xfield>
   </div>
 </template>
 
 <script>
+import xfield from './xfield'
 export default {
-  data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello World!'
-    }
+  components: {
+    xfield
   }
 }
 </script>

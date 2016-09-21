@@ -2,7 +2,10 @@
   <div id="app">
     <img class="logo" src="./assets/logo.png">
     <hello></hello>
-    <p>
+    <xfield label="First Label"></xfield>
+    <xfield label="Second Label"></xfield>
+    <xfield label="Label the Thiiird"></xfield>
+    <!--<p>
       Welcome to your Vue.js app!
     </p>
     <p>
@@ -18,16 +21,18 @@
       You may also want to checkout
       <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
       <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
+    </p>-->
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello'
+import xfield from './components/xfield'
 
 export default {
   components: {
-    Hello
+    Hello,
+    xfield
   }
 }
 </script>
