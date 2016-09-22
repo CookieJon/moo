@@ -9,7 +9,10 @@
 
 <script>
 var $ = require('jquery')
-require('../../node_modules/jquery-ui/ui/widgets/draggable')
+require('jquery-ui/ui/widgets/draggable')
+require('jquery-ui/ui/widgets/resizable')
+// import $ from 'jquery'
+import 'jquery-ui'
 export default {
   data () {
     return {
@@ -28,9 +31,10 @@ export default {
   },
   ready () {
     var self = this
-    $(function () {
-      console.log($(self.$el).draggable())
-    })
+    $(self.$el).draggable()
+    // $(function () {
+    //   //  console.log($(self.$el).draggable())
+    // })
   }
 }
 </script>
