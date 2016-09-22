@@ -2,12 +2,14 @@
   <div class="field">
     <label>
       {{ label }}
-      <input type="text" placeholder="I'm waiting" />
+      <input type="text" placeholder="{{ msg }}" />
     </label>
   </div>
 </template>
 
 <script>
+var $ = require('jquery')
+require('../../node_modules/jquery-ui/ui/widgets/draggable')
 export default {
   data () {
     return {
@@ -15,7 +17,7 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Go Jonny Go!'
+      msg: $.toString() + 'Go Jonny Go!'
     }
   },
   props: {
@@ -23,6 +25,12 @@ export default {
       required: true,
       type: String
     }
+  },
+  ready () {
+    var self = this
+    $(function () {
+      console.log($(self.$el).draggable())
+    })
   }
 }
 </script>

@@ -8,6 +8,11 @@
 <script>
 import xfield from './xfield'
 export default {
+  data () {
+    return {
+      msg: 'Go Jonny, go!'
+    }
+  },
   components: {
     xfield
   }

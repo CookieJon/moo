@@ -13,22 +13,6 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
-  resolve: {
-    extensions: ['', '.js', '.vue'],
-    fallback: [path.join(__dirname, '../node_modules')],
-    alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components'),
-      // // bind version of jquery-ui
-      "jquery-ui": "jquery-ui/jquery-ui.js",      
-      // bind to modules;
-      modules: path.join(__dirname, "node_modules"),      
-    }
-  },
-  resolveLoader: {
-    fallback: [path.join(__dirname, '../node_modules')]
-  },
   plugins: [
     new webpack.ProvidePlugin({
       "$":"jquery",
@@ -36,6 +20,22 @@ module.exports = {
       "window.jQuery":"jquery"
     })
   ],
+  resolve: {
+    extensions: ['', '.js', '.vue'],
+    fallback: [path.join(__dirname, '../node_modules')],
+    alias: {
+      'src': path.resolve(__dirname, '../src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'components': path.resolve(__dirname, '../src/components'),
+      'modules': path.join(__dirname, "../node_modules")      
+      // 'jquery': 'jquery',  
+      // 'jquery-ui': path.join(__dirname, '../node_modules/jquery-ui/ui/widgets'),
+      // 'jquery-ui-css': 'jquery-ui/../../themes/base'
+    }
+  },
+  resolveLoader: {
+    fallback: [path.join(__dirname, '../node_modules')]
+  },
   module: {
     preLoaders: [
       {
