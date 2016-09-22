@@ -1,10 +1,13 @@
 <template>
   <div id="app">
+   <pre style='width:400px;height:200px;text-align:left;' v-html='$data | json 2'></pre>
     <img class="logo" src="./assets/logo.png">
     <hello></hello>
-    <xfield label="First Label"></xfield>
+
+    <xfield :model.sync="selectedBitmap" label="First Label"></xfield>
     <xfield label="Second Label"></xfield>
     <xfield label="Label the Thiiird"></xfield>
+
     <!--<p>
       Welcome to your Vue.js app!
     </p>
@@ -33,11 +36,25 @@ export default {
   components: {
     Hello,
     xfield
+  },
+  data () {
+    return {
+      filters: [
+        {type: 'PixelMap', name: '"Amazing Filter', min: 10, max: 190},
+        {type: 'ColorMap', name: 'Crazy for You', min: 10, max: 190},
+        {type: 'PixelMap', name: 'All Shook Up', min: 10, max: 190}
+      ],
+      selectedBitmap: 'Selected Bimap is ME!',
+      bitmaps: []
+    }
   }
 }
 </script>
 
-<style>
+<style >
+red {
+  background-color: red;
+}
 html {
   height: 100%;
 }

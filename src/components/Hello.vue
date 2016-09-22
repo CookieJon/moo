@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello red">
     <h1>{{ msg }}!!!</h1>
     <xfield label="test"></xfield>
   </div>
