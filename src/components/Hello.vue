@@ -1,5 +1,5 @@
 <template>
-  <div class="hello red">
+  <div class="hello red jonathan">
     <h1>{{ msg }}!!!</h1>
     <xfield label="test"></xfield>
   </div>
@@ -20,8 +20,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
+<style  lang="scss">
+$red: red;
+jonathan {
+  border:2px solid blue;
+  background: $red;
+}
+
+h2 {
   color: #42b983;
 }
 </style>
