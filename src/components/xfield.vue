@@ -12,7 +12,7 @@
 import $ from 'jquery'
 import 'jquery-ui/ui/widgets/draggable'
 // require('jquery-ui/ui/widgets/draggable')  // Same as: import 'jquery-ui/ui/widgets/draggable'
-require('jquery-ui/ui/widgets/resizable')
+require('jquery-ui/resizable')
 require('jquery-ui/themes/base/core.css')
 require('jquery-ui/themes/base/resizable.css')
 require('jquery-ui/themes/base/draggable.css')

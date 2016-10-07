@@ -27,9 +27,10 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
-      'modules': path.join(__dirname, '../node_modules'),  
-      'jquery': 'modules/jquery',
-//      'jquery-ui': 'modules/jquery-ui/ui/widgets', 
+      'modules': path.join(__dirname, '../node_modules'),
+      'jquery': '../../node_modules/jquery',
+      'jquery': '../../node_modules/jquery-ui/ui/widgets'
+//      'jquery-ui': 'modules/jquery-ui/ui/widgets',
 //      'jquery-ui-css': 'modules/jquery-ui/themes/base'
       // 'jquery-ui': path.join(__dirname, '../node_modules/jquery-ui/ui/widgets'),
       // 'jquery-ui-css': 'jquery-ui/../../themes/base'
